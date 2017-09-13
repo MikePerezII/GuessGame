@@ -1,0 +1,32 @@
+.container {
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	padding: 10%;
+	background-color: white;
+	display: block;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+
+}
+
+.instructions {
+	color: #000000;
+	font-style: normal;
+	text-align: center;
+	font-weight: bold;
+	font-size: 100;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+	background-image: url('BG.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
