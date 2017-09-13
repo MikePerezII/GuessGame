@@ -1,4 +1,5 @@
 
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -25,7 +26,7 @@ function playGame(player) {
             }
         }
         else {
-            alert("Quitter!");
+            alert("Wrong!");
             player.losses ++;
         }
     }
@@ -41,5 +42,18 @@ function start() {
     while(playAgain == 'y');
 }
 
-alert("Steel your mind for this, the ultimate game of skill!");
-start();
+
+var state=0;
+document.body.addEventListener('click', function () {
+	if(state!=1) {
+		alert("Welcome to the Guessing game!");
+		state="1";
+		start()
+	}
+	else {
+		alert("Stopping");
+		state="0";
+		alert("Click page to restart")
+
+	}
+})
