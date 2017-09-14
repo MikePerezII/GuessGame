@@ -1,3 +1,9 @@
+alert("Steel your mind for this, the ultimate game of skill!");
+var Average = 0;
+var games = 1;
+var totalTurns = 0;
+
+start();
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -7,14 +13,17 @@ function getRandomInt(min, max) {
 
 function playGame(player) {
     var Turns = 0;
-    var Correct = 0;
-    var Answer = getRandomInt(1,100);
+    var Correct = 0;	
+    var Answer = getRandomInt(1,10);
     do {
-        var Guess = prompt("Guess the integer between 0 and 100!");
+        var Guess = prompt("Guess the integer between 1 and 100!");
         Turns++;
         if (isNaN(Guess) !== true) {
             if (Guess == Answer) {
                 alert("CORRECT! You guessed it in "+Turns+" turns.");
+				totalTurns = Turns + totalTurns;
+				var Average = totalTurns / games;
+					alert("Your average guesses per game is "+Average+".");
                 Correct = 1;
             }
             else if (Guess > Answer) {
@@ -36,10 +45,10 @@ function start() {
     var playAgain = 'y';
     do {
         playGame();
+		games++;
         playAgain = prompt("Would you like to play again? (y or n)");
+		
     }
     while(playAgain == 'y');
 }
 
-alert("Steel your mind for this, the ultimate game of skill!");
-start();
